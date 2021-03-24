@@ -14,9 +14,9 @@
             {% for partner in category.items %}
                 <div class="partner-instance">
                     {% load static %}
-                    <div class="image-container "  id="{{partner.name}}" >
+                    <div class="image-container {% if partner.career_link %} hasCareerLink {% endif %}"  id="{{partner.name}}" >
                                 {% if partner.image %}
-                                <img class="logo lazy lazy-on-view " 
+                                <img class="logo lazy lazy-on-view" 
                                     src="{{ partner.image.thumbnail.320x320.url }}"
                                     data-srcset="{{ partner.image.thumbnail.320x320.url }} 320w,
                                         {{ partner.image.thumbnail.720x720.url }} 720w,
@@ -34,15 +34,7 @@
                             <a href="#leaflet-modal" class="triangle" data-leaflet-url="{{ partner.leaflet.url }}" data-toggle="modal"></a>
                             {% endif %}
                             {% if partner.career_link %}
-                            <script>document.getElementById("{{partner.name}}").classList.add("hasCareerLink")</script>
                             <a href="{{ partner.career_link }}" id="{{partner.name}}-career-link" class="career-button " > <p>Career site</p></a>
-                            <!-- <script>
-                                var career_btn = document.getElementById("{{partner.name}}-career-link");
-                                var img_con = document.getElementById("{{partner.name}}");
-                                img_con.addEventListener("mouseover",function(){
-                                    setTimeout(img_con.classList.add("enable"),1000)});
-                                img_con.addEventListener("mouseout", function(){ img_con.classList.remove("enable")});
-                            </script> -->
                             {% endif %}
                             <a href="{{ partner.link }}" class="website-button"> <p>Website</p></a>
                     </div>

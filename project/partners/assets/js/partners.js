@@ -25,3 +25,17 @@ $(window).on("click", function(e) {
         }
     }
 });
+
+$('.triangle').on("click touch", function(){
+    console.log(this.id.concat("-modal"));
+    let id = this.id.concat("-modal");
+    let m = document.getElementById(id);
+    console.log(m);
+    $(m).removeClass('hidden');
+});
+
+$('.close').on("click touch", function(){
+    console.log(this.parentElement.parentElement);
+    let m1 = this.parentElement.parentElement;
+    $(m1).addClass('hidden');
+});

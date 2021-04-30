@@ -274,7 +274,6 @@ article.sponsors {
     border: 1px solid #888;
     width: 90%;
     height: 90%;
-    //@include make-col(4);
     border-radius: 20px;
   }
 .modal-info-container{
@@ -293,7 +292,6 @@ article.sponsors {
     .modal-buttons{
         display: inline-flex;
         justify-content: center;
-        // border:black solid;
         width: 100%;
         height: auto;
         flex-wrap: wrap;

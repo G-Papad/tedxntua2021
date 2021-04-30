@@ -1,92 +1,141 @@
-main article.that {
+main article.about {
   padding: 0 $page-padding-x-lg $page-padding-y-lg;
 }
 
-article.that{
-  .page-title{
+.circle {
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  width: 250px;
+  height: 250px;
+  background: $primary;
+  border-radius: 50%;
+  display: none;
+}
+
+article.about {
+  .page-title {
     text-align: center;
     margin: 1em;
   }
-  
-  .team-container{
+  .team-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 10em;
+    margin: auto;
+    max-width: 1500px;
   }
-
-  .imagebox{
+  .imagebox {
+    @include make-col(2);
     position: relative;
-    margin-top: 1em;
-    padding: 1em 15px;
-      
-    .member{
-      text-align: center;
-      font-size: 1.2em;
-      color: $primary;
-      margin-top: -2.5em;
-      background: $primary;
-      padding: 4px 8px;
-      color: black;
-      position: absolute;
-      font-size: 1em;
-    }
-
-    .team-member-hover{
-      position: absolute;
-      left: 0.95em;
-      top: 0;
-      transition: opacity 0.5s ease-in;
-      opacity: 0;
-      height: 0;
-      overflow: hidden;  
-      img{
-        margin-top: 16px;
-        width: 18em;
-        height: 15em;
-        object-fit: cover;
-      }  
-    }
-
-    img{
-      border-radius: $border-radius-sm;
-    }
-  }
-
-  .team-member img{
-    width: 18em;
-    height: 15em;
-    object-fit: cover;
-  }
-
-  .imagebox:hover .team-member-hover{ 
-    display: inline;
+    margin: 1em 0;
     width: 100%;
-    opacity: 1;
-    height: auto;
-  }
-
-  .imagebox:hover .team-member{
-    opacity: 0;
-  }
-
-  .chain{
-     margin-left: -35px;
-     margin-right: -35px;
-    align-self: center;
-    img{
-      width: 9vw;
-      height: 5em;
+    height: 12em;
+    .team-member {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: $border-radius;  
+      .background-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(232, 227, 220, 1);
+        filter: blur(10px);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: $border-radius-sm;
+        position: relative;
+      }  
+      .member-tag{
+        font-family: $font-family-serif;
+        text-align: center;
+        font-size: 1.2em;
+        color: $primary;
+        margin-top: -2.5em;
+        background: $secondary;
+        padding: 4px 8px;
+        color: white;
+        position: absolute;
+        font-size: 1em;
+        opacity: 0.9;
+        border-radius: 0 5px 5px 0;
+        &.alt {
+          opacity: 0;
+        }
+      }
     }
-  }  
+    .chain-left, .chain-right {
+      height: 3em;
+      width: max-content;
+      object-fit: contain;
+      align-self: center;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      display: flex;
+      font-size: 0.8rem;
+      img {
+        margin: auto;
+        transform: scale(1);
+        height: 100%;
+      }
+    }
+    .chain-left {
+      right: 0;
+    }
+    .chain-right {
+      left: 0;
+    }
+    &:first-child {
+      .chain-right {
+        display: none;
+      }
+    }
+    &:hover {
+      .circle {
+        display: block;
+      }
+      .member-tag {
+        opacity: 0;
+        &.alt {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+  .chain{
+    @include make-col(1);
+    align-self: center;
+    margin: 1em 0;
+    overflow: hidden;
+    font-size: 0.8rem;
+    img{
+      height: 3em;
+      width: 100%;
+      object-fit: cover;
+      transform: scale(1);
+    }
+  }
 
   section#about{
-    margin-top: 3rem;
+    margin: auto;
+    margin-top: 5rem;
+    max-width: 1500px;
     img{
         width: 100%;
         height: auto;
-        object-fit: cover;
+        max-height: 850px;
         border: 4px solid $secondary;
         border-radius: $border-radius;    
+        object-fit: cover;
     }
 
     h3{
@@ -100,6 +149,9 @@ article.that{
         margin-bottom: 0;
       }
     }
+    .row {
+      justify-content: space-evenly;
+    }
   }
 
   .about-section{
@@ -108,9 +160,8 @@ article.that{
 
   #about-tedxntua{
     position: relative;
-    width: 60rem;
     max-width: 90%;
-    margin-top: -12vw;
+    // margin-top: -6vw;
     margin-left: auto;
     margin-right: auto;
     padding: 1.5rem;
@@ -120,86 +171,147 @@ article.that{
   }
 }
   
-@include media-breakpoint-up (lg){
-  .chain:nth-child(3n+0){
-   display: none;
-  }
-  .chain:last-child{
-    display: none;
+.inner-box:nth-child(8n) {
+  display: none;
+ }
+ .inner-box:nth-child(8n-1){
+   .chain-left {
+     display: none !important;
+   }
+ }
+ .inner-box:nth-child(8n+1){
+  .chain-right {
+    display: none !important;
   }
 }
 
-@include media-breakpoint-down (md){
-  main article.that{
-    padding: 0 $page-padding-x $page-padding-y;
+.inner-box:nth-last-child(60n-58) {
+  .chain-left {
+    display: none !important;
   }
-  .chain:nth-child(4n+0){
-    display: none;
-  }
-  .chain:last-child{
-    display: none;
+}
+.inner-box:last-child {
+  display: none;
+}
+ 
+@include media-breakpoint-down(lg) {
+  .inner-box:nth-child(8n) {
+    display: flex !important;
+   }
+   .inner-box:nth-child(8n-1){
+     .chain-left {
+       display: flex !important;
+     }
+   }
+   .inner-box:nth-child(8n+1){
+    .chain-right {
+      display: flex !important;
+    }
   }
 
-  .imagebox{   
-    width: 35vw;
-    padding:1em 0;
-    .team-member img{
-      width: 100%;
-      height: 12em;
-      object-fit: cover;
-    }
-    .team-member-hover{
-      left: 0;
-      img{
-        width: 91%;
-        height: 12em;
-        object-fit: cover;
+  article.about {
+    .imagebox {
+      @include make-col(3);
+      &:first-child {
+        .chain-right {
+          display: none;
+        }
       }
     }
   }
-  
-  .chain{
-    margin: auto 0;
-    img{
-      width: 20vw;
+
+  .inner-box:nth-child(6n) {
+    display: none;
+   }
+   .inner-box:nth-child(6n-1){
+     .chain-left {
+       display: none !important;
+     }
+   }
+   .inner-box:nth-child(6n+1){
+    .chain-right {
+      display: none !important;
     }
+  }
+  .inner-box:nth-last-child(60n-58) {
+    .chain-left {
+      display: none !important;
+    }
+  }
+  .inner-box:last-child {
+    display: none !important;
   }
 }
 
 @include media-breakpoint-down (sm){
-  article.that{
-    .imagebox{   
-      width: 35vw;
-      padding:1em 0;
-      .team-member img{
-        width: 100%;
-        height: 12em;
-        object-fit: cover;
-      }
-      .team-member-hover{
-        left: 0;
-        img{
-          margin-top: 16px;
-          width: 100%;
-          height: 12em;
-          object-fit: cover;
-        }
-      }
-    }
+  main article.about{
+    padding: 0 $page-padding-x $page-padding-y;
+  }
 
-    .chain{
-      margin: auto 0;
-      img{
-        width: 20vw;
-      }
-    }
-
-    .chain:nth-child(4n+0){
-      display: none;
+  .inner-box:nth-child(6n) {
+    display: flex;
+   }
+   .inner-box:nth-child(6n-1){
+     .chain-left {
+       display: flex !important;
      }
+   }
+   .inner-box:nth-child(6n+1){
+    .chain-right {
+      display: flex !important;
+    }
+  }
 
-    .chain:last-child{
+  article.about {
+    .imagebox {
+      @include make-col(4);
+    }
+    .chain, .chain-left, .chain-right {
+    } 
+  }
+  .inner-box:nth-child(4n) {
+    display: none !important;
+   }
+   .inner-box:nth-child(4n-1){
+     .chain-left {
+       display: none !important;
+     }
+   }
+   .inner-box:nth-child(4n+1){
+    .chain-right {
+      display: none !important;
+    }
+  }
+}
+
+@include media-breakpoint-down (xs){
+  
+  main article.about{
+    padding: 0 5px;
+  }
+  article.about {
+    .imagebox {
+      max-width: 44.66667%;
+      flex: 0 0 44.66667%;
+    } 
+  }
+}
+
+@media (max-width: 372px) {
+  article.about {
+    .chain {
       display: none;
+    }
+    .imagebox {
+      max-width: 46.66667%;
+      flex: 0 0 46.66667%;
+      margin: 5px;
+      .team-member .member-tag {
+        font-size: 0.8rem;
+      }
+      .chain-left, .chain-right {
+        display: none !important;
+      }
     }
   }
 }

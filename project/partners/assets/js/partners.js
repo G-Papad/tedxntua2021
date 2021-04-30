@@ -17,7 +17,7 @@ $('.image-container').on("click touch", function() {
     $(this).addClass('hover');
     $('.image-container').not(this).removeClass('hover');
 });
-
+    
 $(window).on("click", function(e) {
     if (activePartner != null) {
         if ($(e.target.parentElement).hasClass('image-container') == false) {
@@ -26,11 +26,12 @@ $(window).on("click", function(e) {
     }
 });
 
+
 $('.triangle').on("click touch", function(){
     console.log(this.id.concat("-modal"));
     let id = this.id.concat("-modal");
     let m = document.getElementById(id);
-    console.log(m);
+   // console.log(m);
     $(m).removeClass('hidden');
 });
 

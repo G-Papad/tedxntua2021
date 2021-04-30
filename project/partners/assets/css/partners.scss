@@ -3,6 +3,7 @@
 }
 
 article.sponsors {
+    padding: 0 $page-padding-x-lg;
     h2 {  
         text-align: center;
         margin: 2rem 0;
@@ -14,97 +15,92 @@ article.sponsors {
             font-size: 2.25rem;
         }
     }
-
-    .category-container{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .partners-collection{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        @include make-col(12);
-        width: 100%;
-        height: 100%;
-        align-items: center;
-        justify-content: center;  
-    }
-
-    .partner-instance{ 
-        @include make-col(3);
-        max-width: 100%;
-        margin: 2em 0;
-        display:flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 1vw;
-        padding: 2vh; 
-        position: relative;
-
-    .image-container{
-        position: relative;
-        margin: auto;
-        width: 10em;
-        height: 10em;
-        max-height: 100%;
-        max-width: 100%;
-        background-color: white;
-        border-radius: 20px;
+    p {
+        font-family: $font-family-serif;
         align-self: center;
-        &.hover{
-            .website-button{
+    }
+
+    .category-container {
+        display: block;
+        flex-direction: column;
+        .partners-collection {
+            @include make-col(12);
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            align-items: center;
+            justify-content: center;  
+        }
+    }
+    .partner-instance { 
+        margin: 2em 0.25rem;
+        display: flex;
+        padding: 0;
+        .partner-card {
+            margin: auto;
+            width: 10em;
+            height: 10em;
+        }
+        .image-container{
+            position: relative;
+            margin: auto;
+            height: 100%;
+            width: 100%;
+            background-color: white;
+            border-radius: $border-radius;
+            align-self: center;
+            border: 5px solid $primary;
+            .partner-buttons {
                 display: flex;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                align-items: center;
+                justify-content: space-around;
             }
-            .logo{
-                filter: blur(5px);
-                -webkit-filter: blur(5px); 
-            }
-            &.hasCareerLink{
+            &.hover{
                 .website-button{
-                    top:30%;
-                    left: 10%;
-                }
-                .career-button{
                     display: flex;
-                }   
+                }
+                .logo{
+                    filter: blur(4px);
+                    -webkit-filter: blur(4px);
+                }
+                &.hasCareerLink{
+                    .career-button{
+                        display: flex;
+                    }   
+                }
             }
+        }
+        .logo{
+            width: 100%;
+            height:100%;
+            object-fit: contain;
+            border-radius: $border-radius;
+            padding: 1em;
         }
     }
 
-    .logo{
-        width: 100%;
-        height:100%;
-        object-fit: contain;
-        border-radius: 25px;
-        padding: 1em;
+    .triangle{
+        z-index: 2;
     }
-}
-
     .career-button{
-        position: absolute;
-        top: 30%;
-        right: 10%;
-        height: 35%;
-        width: 35%;
-        height: 35%;
-        width: 35%;
-        border-radius: 20px;
+        height: 40%;
+        width: 40%;
+        border-radius: $border-radius-sm;
         border: 1px solid black;
-        display: inline-block;
-        align-self: center;
         z-index:1;
         display: none;
         p{
             font-weight: bold;
-            font-size: 0.8em;
             color: black;
             width: 100%;
-            height: 40%;
-            position: absolute;
-            top: 25%;
             text-align: center;
             line-height: 1.1;
+            margin-bottom: 0;
         }
     }
 
@@ -116,25 +112,19 @@ article.sponsors {
     }
 
     .website-button{
-        position: absolute;
-        top:32.5%;
-        left:32.5%;
-        height: 35%;
-        width: 35%;
-        border-radius: 20px;
+        height: 60%;
+        width: 60%;
+        border-radius: $border-radius-sm;
         border: 1px solid black;
         z-index:1;
         display: none;
         p{  
             font-weight: bold;
-            font-size: 0.8em;
             color: black;
             width: 100%;
-            height: 40%;
-            position: absolute;
-            top:30%;
             text-align: center;
             z-index:2;
+            margin-bottom: 0;
         }
     }
     
@@ -151,28 +141,27 @@ article.sponsors {
         h2{
             margin-top: 1rem;
         }
+        .partners-collection {
+            justify-content: space-evenly;
+        }
         .partner-instance{
-            @include make-col(12);
-            max-width: unset;
-            max-height: unset;
-            width: 25em;
-            height: 25em;
-            .image-container{
+            max-width: 100%;
+            flex: 0;
+            margin: 1em;
+            .partner-card {
                 width: 20em;
                 height: 20em;
-                max-width: 100%;
-                max-height: 100%;
             }
             .career-button{
                 p{
-                    font-size: 1.5em;
-                    top:30%;
+                    font-size: 1.2em;
                 }
             }
             .website-button{
+                width: 40%;
+                height: 40%;
                 p{
-                    font-size: 1.5em;
-                    top:40%;
+                    font-size: 1.2em;
                 }
             }
             .triangle{
@@ -186,6 +175,7 @@ article.sponsors {
                 border-left: solid 1.7em #CACACA;
                 border-top: solid 1.7em $body-bg;
                 border-right: solid 1.7em $body-bg;
+                border-top-right-radius: 15px;
             }
             .triangle:hover{
                 width: 3em;
@@ -195,8 +185,7 @@ article.sponsors {
                 border-left: solid 2em #CACACA;
                 border-top: solid 2em $body-bg;
                 border-right: solid 2em $body-bg;
-                cursor: context-menu;
-                transition-duration: 0.5s ;
+                transition-duration: 0.4s ;
                 .leaflet-button{
                     width: 100%;
                     height: 100%;
@@ -209,15 +198,16 @@ article.sponsors {
     .category#GS {
         .partner-instance{
             @include make-col(4);
-            width: 20em;
-            height: 20em;
-            max-width: 100%;
-            max-height: 100%;
-            .image-container{
+            margin-left: 0;
+            margin-right: 0;
+            .partner-card {
+                position: relative;
                 width: 15em;
                 height: 15em;
-                max-height: 100%;
-                max-width:100%;
+            }
+            .image-container{
+                width: 100%;
+                height: 100%;
             }
             .career-button{
                 p{
@@ -226,6 +216,8 @@ article.sponsors {
                 }
             }
             .website-button{
+                width: 40%;
+                height: 40%;
                 p{
                     font-size: 1em;
                     top:37%;
@@ -235,24 +227,23 @@ article.sponsors {
                 width: 1.7em;
                 height: 1.7em;
                 position: absolute;
-                top:0%;
-                right:0%;
+                top: 0;
+                right: 0;
                 border-bottom: solid 1.2em #CACACA;
                 border-bottom-left-radius: 15px;
                 border-left: solid 1.2em #CACACA;
                 border-top: solid 1.2em $body-bg;
                 border-right: solid 1.2em $body-bg;
+                border-top-right-radius: 15px;
             }
             .triangle:hover{
                 width: 3em;
                 height: 3em;
                 border-bottom: solid 1.7em #CACACA;
-                border-bottom-left-radius: 15px;
                 border-left: solid 1.7em #CACACA;
                 border-top: solid 1.7em $body-bg;
                 border-right: solid 1.7em $body-bg;
-                cursor: context-menu;
-                transition-duration: 0.5s ;
+                transition-duration: 0.4s ;
             }
         }
     }
@@ -262,7 +253,6 @@ article.sponsors {
 /////////////////////////////////
 // Modal
 /////////////////////////////////
-
 .modal{
     display: flex; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -353,6 +343,7 @@ article.sponsors {
     display:none;
 }
 
+
 @include media-breakpoint-up(xl){
     .image-container:hover{
         .website-button{
@@ -376,46 +367,62 @@ article.sponsors {
 
 @include media-breakpoint-down(md){
     article.sponsors {
+        padding: 0 $page-padding-x;
         .partner-instance{
-            height: 40vw;
-            width: 40vw;
-            margin: 0 0 !important;
+            margin: 1em 0 ;
         }
         .triangle{
             margin: -1px;
         }
         .website-button, .career-button{
-            // background-color: black;
             border-radius: 10px;
             font-size: 0.8rem;
-            p{
-                top:20%;
-            }
-            // height: 70%;
-            // width: 70%;
-            // background-color: black;
-            // opacity: 0.7;
-            // p {
-            //     font-weight: bold;
-            //     text-shadow: black;
-            //     color: $body-color;
-            // }
         }
         .category#PS{
+            font-size: 0.9rem;
             .website-button, .career-button{
-                font-size:1rem;
+                font-size: 1rem;
             }
         }       
-        .category#GS{
-            .website-button, .career-button{
-                p{
-                    top:30%;
-                }
-            }
+        .category#GS .partner-instance{
+            @include make-col(6);
         }
     }
 }
-
+@include media-breakpoint-down(sm){
+    article.sponsors {
+        h2 {  
+            font-size: 1.5rem;
+            &.PS-heading {
+                font-size: 2rem;
+            }
+            &.GS-heading {
+                font-size: 1.75rem;
+            }
+        }
+        padding: 0 5px;
+        .category#PS .partner-instance .partner-card {
+            width: 17em;
+            height: 17em;
+        } 
+        .category#GS .partner-instance .partner-card {
+            width: 11em;
+            height: 11em;
+        }
+    }
+}
+@media (max-width: 372px) {
+    article.sponsors {
+        .partner-instance .partner-card {
+            width: 8em;
+            height: 8em;
+        }
+        .category#GS .partner-instance .partner-card {
+            width: 9em;
+            height: 9em;
+        }
+    }
+}
 @include media-breakpoint-down(xs){
     .modal-content{
         height: 100%;

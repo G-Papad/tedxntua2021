@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-24 19:33+0200\n"
+"POT-Creation-Date: 2021-04-29 21:43+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,13 +29,17 @@ msgstr ""
 "εμπλέκονται σε αυτήν την προσπάθεια και την ιστορία που κρύβεται πίσω από "
 "την ομάδα του TEDxNTUA."
 
-#: project/about/templates/about/index.html:31
+#: .\project\about\templates\about\index.html:10
+msgid "about.meet_the_team"
+msgstr "ΓΝΩΡΙΣΕ ΤΗΝ ΟΜΑΔΑ"
+
+#: .\project\about\templates\about\index.html:28
 #, fuzzy, python-format
 #| msgid "%(team_name)s TEAM"
 msgid "%(team_name)s"
 msgstr "ΟΜΑΔΑ %(team_name)s"
 
-#: project/about/templates/about/index.html:52
+#: .\project\about\templates\about\index.html:57
 msgid "about.tedxntua"
 msgstr ""
 "<h3>Τι είναι το TEDxNTUA;</h3><p>Το TEDxNTUA είναι ένα συνέδριο που "
@@ -68,7 +72,7 @@ msgstr ""
 "Ινστιτούτο Συστημάτων Επικοινωνιών και Υπολογιστών (<a href=\"https://www."
 "iccs.gr\" target=\"_blank\">ΕΠΙΣΕΥ</a>) του ΕΜΠ.</p>"
 
-#: project/about/templates/about/index.html:53
+#: .\project\about\templates\about\index.html:58
 msgid "about.join"
 msgstr ""
 "<details><summary><strong>Θέλω να συμμετέχω στην ομάδα!</strong></"
@@ -90,7 +94,7 @@ msgstr ""
 "<strong>Συντονίσου</strong> στις σελίδες μας στα social media ώστε να "
 "παραμένεις ενημερωμένος/η.</p></details>"
 
-#: project/about/templates/about/index.html:58
+#: .\project\about\templates\about\index.html:63
 msgid "about.ted"
 msgstr ""
 "<h3>Τι είναι το TED;</h3><p>Το TED είναι ένας μη κερδοσκοπικός οργανισμός "
@@ -123,7 +127,7 @@ msgstr ""
 "που θέλουν να αλλάξουν τον κόσμο να ενισχύσουν τον αντίκτυπο των "
 "αξιοσημείωτων έργων τους, όπως και των δραστηριοτήτων τους.</p>"
 
-#: project/about/templates/about/index.html:61
+#: .\project\about\templates\about\index.html:66
 msgid "about.tedx"
 msgstr ""
 "<h3>Τι είναι το TEDx;</h3><p>Στο πνεύμα των Ιδεών που Αξίζει να Διαδοθούν, "
@@ -141,7 +145,11 @@ msgstr ""
 msgid "home.date"
 msgstr "29 Μαΐου 2021"
 
-#: project/home/templates/home/hero.html:26
+#: .\project\home\templates\home\hero.html:29
+msgid "home.dualism_logo"
+msgstr ""
+
+#: .\project\home\templates\home\hero.html:38
 msgid "tickets.cta"
 msgstr "Κάνε κράτηση!"
 
@@ -157,41 +165,44 @@ msgstr ""
 "γεμάτο από ομιλίες που θα σας κινήσουν την περιέργεια, παραστάσεις που θα "
 "σας γοητεύσουν και πολυδιάστατα workshops."
 
-#: project/home/templates/home/lineup.html:9
-#: project/program/templates/program/_event-tabs.html:5
-#: project/program/templates/program/listing.html:5
-#: project/templates/layouts/partials/nav.html:50
+#: .\project\home\templates\home\lineup.html:9
+#: .\project\program\templates\program\_event-tabs.html:5
+#: .\project\templates\layouts\partials\nav.html:50
 msgid "Speakers"
-msgstr "Ομιλητές"
+msgstr "ΟΜΙΛΗΤΕΣ"
 
-#: project/home/templates/home/lineup.html:16
-#: project/program/templates/program/_event-tabs.html:8
-#: project/program/templates/program/listing.html:7
-#: project/templates/layouts/partials/nav.html:56
+#: .\project\home\templates\home\lineup.html:16
+#: .\project\program\templates\program\_event-tabs.html:8
+#: .\project\templates\layouts\partials\nav.html:56
 msgid "Performers"
-msgstr "Performers"
+msgstr "PERFORMERS"
 
-#: project/home/templates/home/lineup.html:23
-#: project/program/templates/program/_event-tabs.html:11
-#: project/program/templates/program/listing.html:9
-#: project/templates/layouts/partials/nav.html:62
+#: .\project\home\templates\home\lineup.html:23
+#: .\project\program\templates\program\_event-tabs.html:11
+#: .\project\templates\layouts\partials\nav.html:62
 msgid "Side events"
-msgstr "Side events"
+msgstr "SIDE EVENTS"
 
-#: project/home/templates/home/lineup.html:64
-#: project/program/templates/program/listing.html:66
+#: .\project\home\templates\home\lineup.html:68
+#: .\project\program\templates\program\listing.html:79
 msgid "more_soon"
 msgstr "Σύντομα περισσότερα"
 
-#: project/home/templates/home/summary.html:15
+#: .\project\home\templates\home\lineup.html:78
+#: .\project\program\models.py:197
+msgid "Hosting"
+msgstr "ΠΑΡΟΥΣΙΑΖΕΙ"
+
+#: .\project\home\templates\home\summary.html:14
 msgid "home.ubuntu_summary"
 msgstr ""
-"<p><strong>ΔΥΪΣΜΟΣ</strong>, η προσπάθεια ερμηνείας του κόσμου με βάση "
-"<strong>δύο εξηγητικές αρχές</strong> που συνεργάζονται και συνενεργούν. Η "
-"αποδοχή του δυϊσμού ως <strong>βάση σύνδεσης και δημιουργίας</strong>, η "
-"κατάρριψη της σύνδεσής του με την αντίθεση.</p>"
+"<h3>ΤΙ ΣΗΜΑΙΝΕΙ UBUNTU ? </h3><p><strong>ΔΥΪΣΜΟΣ</strong>, η προσπάθεια "
+"ερμηνείας του κόσμου με βάση <strong>δύο εξηγητικές αρχές</strong> που "
+"συνεργάζονται και συνενεργούν. Η αποδοχή του δυϊσμού ως <strong>βάση "
+"σύνδεσης και δημιουργίας</strong>, η κατάρριψη της σύνδεσής του με την "
+"αντίθεση.</p>"
 
-#: project/home/templates/home/summary.html:16
+#: .\project\home\templates\home\summary.html:15
 msgid "home.ubuntu_full"
 msgstr ""
 "<p>Στο φετινό μας συνέδριο προσεγγίζουμε θεματικές που άπτονται σύγχρονων "
@@ -246,9 +257,9 @@ msgstr ""
 msgid "Link"
 msgstr "Σύνδεσμος"
 
-#: project/partners/models.py:65
-msgid "Platinum Sponsor"
-msgstr "Platinum Χορηγός"
+#: .\project\partners\models.py:65
+msgid "Platinum Sponsors"
+msgstr "Platinum Χορηγοί"
 
 #: project/partners/models.py:66
 msgid "Grand Sponsors"
@@ -278,24 +289,36 @@ msgstr "Χορηγοί Επικοινωνίας"
 msgid "Community Partners"
 msgstr "Συνεργάτες Κοινότητας"
 
-#: project/partners/models.py:93 project/program/models.py:223
-#: project/program/models.py:347 project/team/models.py:101
+#: .\project\partners\models.py:93 .\project\program\models.py:223
+#: .\project\program\models.py:347 .\project\team\models.py:103
 msgid "Published"
 msgstr "Δημόσιο"
 
-#: project/partners/templates/partners/index.html:3
-#: project/templates/layouts/partials/nav.html:81
-msgid "Partners"
-msgstr "Συνεργάτες"
+#: .\project\partners\templates\partners\index.html:4
+#, fuzzy
+#| msgid "partners.description"
+msgid "partners.title"
+msgstr ""
+"Η εκδήλωσή μας δεν θα ήταν εφικτή χωρίς τη στήριξη από οργανισμούς που "
+"συμμερίζονται τις αξίες και τα οράματά μας. Επισκεφθείτε τις ιστοσελίδες "
+"τους και μάθετε περισσότερα για αυτούς."
 
-#: project/partners/templates/partners/index.html:4
+#: .\project\partners\templates\partners\index.html:5
 msgid "partners.description"
 msgstr ""
 "Η εκδήλωσή μας δεν θα ήταν εφικτή χωρίς τη στήριξη από οργανισμούς που "
 "συμμερίζονται τις αξίες και τα οράματά μας. Επισκεφθείτε τις ιστοσελίδες "
 "τους και μάθετε περισσότερα για αυτούς."
 
-#: project/program/admin/activity_admin.py:26
+#: .\project\partners\templates\partners\index.html:38
+msgid "career site"
+msgstr "CAREER SITE"
+
+#: .\project\partners\templates\partners\index.html:42
+msgid "website"
+msgstr "ΣΕΛΙΔΑ"
+
+#: .\project\program\admin\activity_admin.py:26
 msgid "Presenter"
 msgstr "Παρουσιαστής δραστηριότητας"
 
@@ -354,14 +377,29 @@ msgstr "Performance"
 msgid "Side event"
 msgstr "Side event"
 
-#: project/program/models.py:197
-msgid "Hosting"
-msgstr "Παρουσίαση"
-
-#: project/program/templates/program/_event-tabs.html:15
-#: project/templates/layouts/partials/nav.html:69
+#: .\project\program\templates\program\_event-tabs.html:15
+#: .\project\templates\layouts\partials\nav.html:69
 msgid "Schedule"
-msgstr "Πρόγραμμα"
+msgstr "ΠΡΟΓΡΑΜΜΑ"
+
+#: .\project\program\templates\program\listing.html:5
+#: .\project\program\templates\program\speakers.html:2
+#, fuzzy
+#| msgid "speakers.description"
+msgid "speakers.title"
+msgstr "Γνώρισε τους ομιλητές του φετινού TEDxNTUA 2020!"
+
+#: .\project\program\templates\program\listing.html:7
+#, fuzzy
+#| msgid "home.title"
+msgid "performers.title"
+msgstr "Αρχική"
+
+#: .\project\program\templates\program\listing.html:9
+#, fuzzy
+#| msgid "side_events.description"
+msgid "side_events.title"
+msgstr "Μάθε περισσότερα για τα side events του φετινού TEDxNTUA 2020!"
 
 #: project/program/templates/program/listing.html:14
 msgid "speakers.description"
@@ -375,15 +413,19 @@ msgstr "Γνώρισε τους performers του φετινού TEDxNTUA 2020!"
 msgid "side_events.description"
 msgstr "Μάθε περισσότερα για τα side events του φετινού TEDxNTUA 2020!"
 
-#: project/program/templates/program/presenter.html:9
+#: .\project\program\templates\program\presenter.html:10
 msgid "back"
 msgstr "Πίσω"
 
-#: project/program/templates/program/presenter.html:36
+#: .\project\program\templates\program\presenter.html:54
 msgid "presenter.read_full"
 msgstr "Διάβασε την πλήρη περιγραφή"
 
-#: project/program/templates/program/schedule.html:4
+#: .\project\program\templates\program\presenter.html:55
+msgid "presenter.read_less"
+msgstr "Διάβασε λιγότερα"
+
+#: .\project\program\templates\program\schedule.html:4
 msgid "schedule.title"
 msgstr "Πρόγραμμα"
 
@@ -406,7 +448,28 @@ msgstr "Ελληνικά"
 msgid "English"
 msgstr "Αγγλικά"
 
-#: project/templates/layouts/partials/footer.html:112
+#: .\project\templates\layouts\partials\footer.html:23
+#: .\project\templates\layouts\partials\footer.html:30
+msgid "Previous Talks"
+msgstr "Προηγούμενες Ομιλίες"
+
+#: .\project\templates\layouts\partials\footer.html:28
+msgid "WATCH"
+msgstr "ΔΕΣ ΤΙΣ"
+
+#: .\project\templates\layouts\partials\footer.html:35
+msgid "Previous Events"
+msgstr "Προηγούμενα Event"
+
+#: .\project\templates\layouts\partials\footer.html:95
+msgid "Newsletter"
+msgstr "Newsletter"
+
+#: .\project\templates\layouts\partials\footer.html:102
+msgid "Submit"
+msgstr "Εγγραφή"
+
+#: .\project\templates\layouts\partials\footer.html:112
 msgid "Privacy Policy"
 msgstr "Πολιτική Απορρήτου"
 
@@ -421,24 +484,28 @@ msgstr ""
 
 #: project/templates/layouts/partials/nav.html:23
 msgid "Home"
-msgstr "Αρχική"
+msgstr "ΑΡΧΙΚΗ"
 
 #: project/templates/layouts/partials/nav.html:36
 #: project/templates/layouts/partials/nav.html:42
 msgid "The event"
-msgstr "Η εκδήλωση"
+msgstr "Η ΕΚΔΗΛΩΣΗ"
 
 #: project/templates/layouts/partials/nav.html:36
 msgid "(Toggle dropdown)"
 msgstr "(Εμφάνιση/Απόκρυψη υπομενού)"
 
-#: project/templates/layouts/partials/nav.html:91
+#: .\project\templates\layouts\partials\nav.html:81
+msgid "Partners"
+msgstr "ΣΥΝΕΡΓΑΤΕΣ"
+
+#: .\project\templates\layouts\partials\nav.html:91
 msgid "About us"
-msgstr "Σχετικά"
+msgstr "ΣΧΕΤΙΚΑ"
 
 #: project/templates/layouts/partials/nav.html:101
 msgid "Tickets"
-msgstr "Εισιτήρια"
+msgstr "ΕΙΣΙΤΗΡΙΑ"
 
 #: project/templates/layouts/partials/nav.html:106
 msgid "LANGUAGE"
@@ -1647,12 +1714,6 @@ msgstr ""
 #: venv/lib/python3.7/site-packages/versatileimagefield/templates/versatileimagefield/forms/widgets/versatile_image_bootstrap.html:17
 msgid "Primary Point of Interest"
 msgstr ""
-
-#~ msgid "about.meet_the_team"
-#~ msgstr "ΓΝΩΡΙΣΕ ΤΗΝ ΟΜΑΔΑ"
-
-#~ msgid "website"
-#~ msgstr "ΣΕΛΙΔΑ"
 
 #~ msgid "leaflet"
 #~ msgstr "ΦΥΛΛΑΔΙΟ"

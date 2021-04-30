@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-24 19:33+0200\n"
+"POT-Creation-Date: 2021-04-29 21:43+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,12 +28,16 @@ msgstr ""
 "Who are we? What is TED? What is TEDx? Meet the institutions that are "
 "involved in this project and the story behind the team of TEDxNTUA."
 
-#: project/about/templates/about/index.html:31
+#: .\project\about\templates\about\index.html:10
+msgid "about.meet_the_team"
+msgstr "MEET THE TEAM"
+
+#: .\project\about\templates\about\index.html:28
 #, python-format
 msgid "%(team_name)s"
 msgstr ""
 
-#: project/about/templates/about/index.html:52
+#: .\project\about\templates\about\index.html:57
 msgid "about.tedxntua"
 msgstr ""
 "<h3>What is TEDxNTUA?</h3><p>TEDxNTUA is a conference that features "
@@ -63,7 +67,7 @@ msgstr ""
 "Institute of Communication and Computer Systems (<a href=\"https://www.iccs."
 "gr\" target=\"_blank\">ICCS</a>) of NTUA.</p>"
 
-#: project/about/templates/about/index.html:53
+#: .\project\about\templates\about\index.html:58
 msgid "about.join"
 msgstr ""
 "<details><summary><strong>I want to join the team!</strong></summary><p>The "
@@ -82,7 +86,7 @@ msgstr ""
 "weeks before the event for the event-day volunteers. <strong>Stay tuned</"
 "strong> to our social media pages to be updated.</p></details>"
 
-#: project/about/templates/about/index.html:58
+#: .\project\about\templates\about\index.html:63
 msgid "about.ted"
 msgstr ""
 "<h3>What is TED?</h3><p>TED is a nonprofit organization devoted to "
@@ -113,7 +117,7 @@ msgstr ""
 "innovators from around the globe to amplify the impact of their remarkable "
 "projects and activities.</p>"
 
-#: project/about/templates/about/index.html:61
+#: .\project\about\templates\about\index.html:66
 msgid "about.tedx"
 msgstr ""
 "<h3>What is TEDx?</h3><p>In the spirit of ideas worth spreading, TEDx is a "
@@ -129,7 +133,11 @@ msgstr ""
 msgid "home.date"
 msgstr "May 29th 2021"
 
-#: project/home/templates/home/hero.html:26
+#: .\project\home\templates\home\hero.html:29
+msgid "home.dualism_logo"
+msgstr ""
+
+#: .\project\home\templates\home\hero.html:38
 msgid "tickets.cta"
 msgstr "Get your tickets!"
 
@@ -145,41 +153,44 @@ msgstr ""
 "intriguing scientific talks, engaging performances and multifaceted "
 "workshops."
 
-#: project/home/templates/home/lineup.html:9
-#: project/program/templates/program/_event-tabs.html:5
-#: project/program/templates/program/listing.html:5
-#: project/templates/layouts/partials/nav.html:50
+#: .\project\home\templates\home\lineup.html:9
+#: .\project\program\templates\program\_event-tabs.html:5
+#: .\project\templates\layouts\partials\nav.html:50
 msgid "Speakers"
-msgstr ""
+msgstr "SPEAKERS"
 
-#: project/home/templates/home/lineup.html:16
-#: project/program/templates/program/_event-tabs.html:8
-#: project/program/templates/program/listing.html:7
-#: project/templates/layouts/partials/nav.html:56
+#: .\project\home\templates\home\lineup.html:16
+#: .\project\program\templates\program\_event-tabs.html:8
+#: .\project\templates\layouts\partials\nav.html:56
 msgid "Performers"
-msgstr ""
+msgstr "PERFORMERS"
 
-#: project/home/templates/home/lineup.html:23
-#: project/program/templates/program/_event-tabs.html:11
-#: project/program/templates/program/listing.html:9
-#: project/templates/layouts/partials/nav.html:62
+#: .\project\home\templates\home\lineup.html:23
+#: .\project\program\templates\program\_event-tabs.html:11
+#: .\project\templates\layouts\partials\nav.html:62
 msgid "Side events"
-msgstr ""
+msgstr "SIDE EVENTS"
 
-#: project/home/templates/home/lineup.html:64
-#: project/program/templates/program/listing.html:66
+#: .\project\home\templates\home\lineup.html:68
+#: .\project\program\templates\program\listing.html:79
 msgid "more_soon"
 msgstr "More soon"
 
-#: project/home/templates/home/summary.html:15
+#: .\project\home\templates\home\lineup.html:78
+#: .\project\program\models.py:197
+msgid "Hosting"
+msgstr "HOSTING"
+
+#: .\project\home\templates\home\summary.html:14
 msgid "home.ubuntu_summary"
 msgstr ""
-"<p><strong>DUALISM</strong> is the interpretation of the world based on "
-"<strong>two principles</strong> that act jointly and collaborate with each "
-"other. It is proposed to be <strong>the basis of connection and creation</"
-"strong>, rather than the foundation of opposition.</p>"
+"<h3>WHAT IS UBUNTU ? </h3><p><strong>DUALISM</strong> is the interpretation "
+"of the world based on <strong>two principles</strong> that act jointly and "
+"collaborate with each other. It is proposed to be <strong>the basis of "
+"connection and creation</strong>, rather than the foundation of opposition.</"
+"p>"
 
-#: project/home/templates/home/summary.html:16
+#: .\project\home\templates\home\summary.html:15
 msgid "home.ubuntu_full"
 msgstr ""
 "<p>In this year's event, we approach subjects that touch upon current "
@@ -233,9 +244,9 @@ msgstr ""
 msgid "Link"
 msgstr ""
 
-#: project/partners/models.py:65
-msgid "Platinum Sponsor"
-msgstr ""
+#: .\project\partners\models.py:65
+msgid "Platinum Sponsors"
+msgstr "Platinum Sponsors"
 
 #: project/partners/models.py:66
 msgid "Grand Sponsors"
@@ -265,24 +276,31 @@ msgstr ""
 msgid "Community Partners"
 msgstr ""
 
-#: project/partners/models.py:93 project/program/models.py:223
-#: project/program/models.py:347 project/team/models.py:101
+#: .\project\partners\models.py:93 .\project\program\models.py:223
+#: .\project\program\models.py:347 .\project\team\models.py:103
 msgid "Published"
 msgstr ""
 
-#: project/partners/templates/partners/index.html:3
-#: project/templates/layouts/partials/nav.html:81
-msgid "Partners"
-msgstr ""
+#: .\project\partners\templates\partners\index.html:4
+msgid "partners.title"
+msgstr "Partners"
 
-#: project/partners/templates/partners/index.html:4
+#: .\project\partners\templates\partners\index.html:5
 msgid "partners.description"
 msgstr ""
 "Our event would not have been possible without the support from "
 "organizations that share our values and visions. Visit their websites and "
 "learn more about them."
 
-#: project/program/admin/activity_admin.py:26
+#: .\project\partners\templates\partners\index.html:38
+msgid "career site"
+msgstr "CAREER SITE"
+
+#: .\project\partners\templates\partners\index.html:42
+msgid "website"
+msgstr "WEBSITE"
+
+#: .\project\program\admin\activity_admin.py:26
 msgid "Presenter"
 msgstr ""
 
@@ -337,14 +355,23 @@ msgstr ""
 msgid "Side event"
 msgstr ""
 
-#: project/program/models.py:197
-msgid "Hosting"
-msgstr ""
-
-#: project/program/templates/program/_event-tabs.html:15
-#: project/templates/layouts/partials/nav.html:69
+#: .\project\program\templates\program\_event-tabs.html:15
+#: .\project\templates\layouts\partials\nav.html:69
 msgid "Schedule"
-msgstr ""
+msgstr "SCHEDULE"
+
+#: .\project\program\templates\program\listing.html:5
+#: .\project\program\templates\program\speakers.html:2
+msgid "speakers.title"
+msgstr "Speakers"
+
+#: .\project\program\templates\program\listing.html:7
+msgid "performers.title"
+msgstr "Performers"
+
+#: .\project\program\templates\program\listing.html:9
+msgid "side_events.title"
+msgstr "Side events"
 
 #: project/program/templates/program/listing.html:14
 msgid "speakers.description"
@@ -358,15 +385,19 @@ msgstr "Meet the performers of the TEDxNTUA 2021 event!"
 msgid "side_events.description"
 msgstr "Learn more about the side events of the TEDxNTUA 2021 event!"
 
-#: project/program/templates/program/presenter.html:9
+#: .\project\program\templates\program\presenter.html:10
 msgid "back"
 msgstr "Back"
 
-#: project/program/templates/program/presenter.html:36
+#: .\project\program\templates\program\presenter.html:54
 msgid "presenter.read_full"
 msgstr "Read full description"
 
-#: project/program/templates/program/schedule.html:4
+#: .\project\program\templates\program\presenter.html:55
+msgid "presenter.read_less"
+msgstr "Read less"
+
+#: .\project\program\templates\program\schedule.html:4
 msgid "schedule.title"
 msgstr "Schedule"
 
@@ -389,7 +420,28 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: project/templates/layouts/partials/footer.html:112
+#: .\project\templates\layouts\partials\footer.html:23
+#: .\project\templates\layouts\partials\footer.html:30
+msgid "Previous Talks"
+msgstr ""
+
+#: .\project\templates\layouts\partials\footer.html:28
+msgid "WATCH"
+msgstr ""
+
+#: .\project\templates\layouts\partials\footer.html:35
+msgid "Previous Events"
+msgstr ""
+
+#: .\project\templates\layouts\partials\footer.html:95
+msgid "Newsletter"
+msgstr ""
+
+#: .\project\templates\layouts\partials\footer.html:102
+msgid "Submit"
+msgstr ""
+
+#: .\project\templates\layouts\partials\footer.html:112
 msgid "Privacy Policy"
 msgstr ""
 
@@ -403,24 +455,28 @@ msgstr ""
 
 #: project/templates/layouts/partials/nav.html:23
 msgid "Home"
-msgstr ""
+msgstr "HOME"
 
 #: project/templates/layouts/partials/nav.html:36
 #: project/templates/layouts/partials/nav.html:42
 msgid "The event"
-msgstr ""
+msgstr "ΤΗΕ EVENT"
 
 #: project/templates/layouts/partials/nav.html:36
 msgid "(Toggle dropdown)"
 msgstr ""
 
-#: project/templates/layouts/partials/nav.html:91
+#: .\project\templates\layouts\partials\nav.html:81
+msgid "Partners"
+msgstr "PARTNERS"
+
+#: .\project\templates\layouts\partials\nav.html:91
 msgid "About us"
-msgstr ""
+msgstr "ABOUT US"
 
 #: project/templates/layouts/partials/nav.html:101
 msgid "Tickets"
-msgstr ""
+msgstr "TICKETS"
 
 #: project/templates/layouts/partials/nav.html:106
 msgid "LANGUAGE"
@@ -1628,12 +1684,6 @@ msgstr ""
 msgid "Primary Point of Interest"
 msgstr ""
 
-#~ msgid "about.meet_the_team"
-#~ msgstr "MEET THE TEAM"
-
-#~ msgid "website"
-#~ msgstr "WEBSITE"
-
 #~ msgid "leaflet"
 #~ msgstr "LEAFLET"
 
@@ -1677,12 +1727,3 @@ msgstr ""
 
 #~ msgid "home.location"
 #~ msgstr "Hub Events, Kerameikos"
-
-#~ msgid "performers.title"
-#~ msgstr "Performers"
-
-#~ msgid "side_events.title"
-#~ msgstr "Side events"
-
-#~ msgid "speakers.title"
-#~ msgstr "Speakers"

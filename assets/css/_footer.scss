@@ -160,7 +160,7 @@ $social-icon-size: 3em;
             text-shadow: 0 0 20px rgba(0, 0, 0, .9);
         }
     }
-    #newsletter {
+    #newsletter{
         #newsletter-card {
             height: 10em;
             width: 100%;
@@ -203,6 +203,7 @@ $social-icon-size: 3em;
             }
         }
     }
+
     #footer-bottom {
         .legal {
             max-height: 2em;
@@ -225,7 +226,28 @@ $social-icon-size: 3em;
         }
     }
 }
-
+@include media-breakpoint-up(lg) {
+    #footer #newsletter {
+        &.popUp{
+            &.scrolled{
+                position: fixed;
+                bottom: 0;
+                right: 2em;
+                background: #272626;
+                border-radius: 20px 20px 0 0;
+                box-shadow: 0 0 20px -5px black;
+                padding: 1em 2em;
+            }
+        }
+        .close{
+            align-self: flex-end;
+            width: unset;
+        }
+        .hidden{
+            display: none;
+        }
+    }
+}
 @include media-breakpoint-down(lg) {
     #footer {
         padding: 0.5em $page-padding-x;
